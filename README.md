@@ -1,6 +1,6 @@
 # DSA-in-Golang
 
- Data Structures & Algorithms in Golang
+ <p>Data Structures & Algorithms in Golang</p>
 
 
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/y/Arison99/DSA-in-Golang)](https://github.com/Arison99/DSA-in-Golang/commits/main)
