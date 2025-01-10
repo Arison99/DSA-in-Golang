@@ -31,18 +31,19 @@ func plotArray(arr []int, filename string) {
 	p.Title.Text = "Bubble Sort Visualization"
 	p.Y.Label.Text = "Value"
 
-	pts := make(plotter.XYs, len(arr))
+	// Convert []int to plotter.Values
+	values := make(plotter.Values, len(arr))
 	for i, v := range arr {
-		pts[i].X = float64(i)
-		pts[i].Y = float64(v)
+		values[i] = float64(v)
 	}
 
-	bar, err := plotter.NewBarChart(pts, vg.Points(20))
+	// Create a bar chart
+	bars, err := plotter.NewBarChart(values, vg.Points(20))
 	if err != nil {
 		panic(err)
 	}
 
-	p.Add(bar)
+	p.Add(bars)
 	if err := p.Save(10*vg.Inch, 4*vg.Inch, filename); err != nil {
 		panic(err)
 	}
